@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import styles from './service.module.css'
 import Button from '../../components/button/Button'
-import { mainServices, marketplaceServices, websiteTypes, digitalMarketingTypes, MainServiceProps, SubService } from '../../data/service'
+import { mainServices, marketplaceServices, websiteTypes, MainServiceProps, SubService } from '../../data/service'
 import { StaticImageData } from 'next/image'
 
 import Heading from '../../components/heading/heading'
@@ -14,7 +14,7 @@ interface MainServiceComponentProps {
     isReversed: boolean;
 }
 
-const MainService = ({  service, isReversed }: MainServiceComponentProps) => {
+const MainService = ({ service, isReversed }: MainServiceComponentProps) => {
     const router = useRouter()
 
     const handleEnquiryClick = () => {
@@ -109,26 +109,25 @@ const Services = () => {
                             service={service}
                             isReversed={index % 2 !== 0}
                         />
-
                         <div className={styles.subServices}>
                             <h2 className={styles.subTitle}>
-                                {index === 0 ? 'Marketplace Solutions' :
-                                    index === 1 ? 'Website Solutions' :
-                                        'Digital Marketing Solutions'}
-                            </h2>
-                            <div className={styles.cardGrid}>
                                 {index === 0
-                                    ? marketplaceServices.map(service => (
-                                        <SubServiceCard key={service.id} service={service} />
-                                    ))
+                                    ? 'Marketplace Solutions'
                                     : index === 1
-                                        ? websiteTypes.map(service => (
-                                            <SubServiceCard key={service.id} service={service} />
-                                        ))
-                                        : digitalMarketingTypes.map(service => (
-                                            <SubServiceCard key={service.id} service={service} />
-                                        ))
-                                }
+                                        ? 'Website Solutions'
+                                        : ''}
+                            </h2>
+
+                            <div className={styles.cardGrid}>
+                                {index === 0 &&
+                                    marketplaceServices.map(service => (
+                                        <SubServiceCard key={service.id} service={service} />
+                                    ))}
+
+                                {index === 1 &&
+                                    websiteTypes.map(service => (
+                                        <SubServiceCard key={service.id} service={service} />
+                                    ))}
                             </div>
                         </div>
                     </div>

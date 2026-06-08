@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import {
   marketplaceServices,
   websiteTypes,
-  digitalMarketingTypes,
   mainServices
 } from '@/data/service'
 
@@ -28,7 +27,6 @@ interface Props {
 const allServices = [
   ...marketplaceServices,
   ...websiteTypes,
-  ...digitalMarketingTypes,
   ...mainServices.map(service => ({
     ...service,
     slug: service.path.replace('/service/', ''),

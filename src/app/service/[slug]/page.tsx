@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { marketplaceServices, websiteTypes, digitalMarketingTypes, mainServices } from '@/data/service'
+import { marketplaceServices, websiteTypes, mainServices } from '@/data/service'
 import ServiceDetailClient from './service-detail-client'
 import { extractServiceModifier, getModifiedServiceTitle } from '@/seo/serviceModifiers'
 import styles from './service-detail.module.css'
@@ -15,7 +15,7 @@ interface Props {
 const allServices = [
   ...marketplaceServices, 
   ...websiteTypes, 
-  ...digitalMarketingTypes,
+  // ...digitalMarketingTypes,
   // Transform mainServices to match the expected structure
   ...mainServices.map(service => ({
     ...service,

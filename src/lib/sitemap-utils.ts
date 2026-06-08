@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { marketplaceServices, websiteTypes, digitalMarketingTypes, mainServices } from '@/data/service'
+import { marketplaceServices, websiteTypes, mainServices } from '@/data/service'
 import { cities, createCitySlug } from '@/seo/cities'
 import { blogPosts } from '@/data/blog'
 import { SERVICE_MODIFIERS } from '@/seo/serviceModifiers'
@@ -15,7 +15,7 @@ export interface SitemapUrl {
  * Priority modifiers for sitemap optimization
  * Only these modifiers are included in the full sitemap
  */
-const PRIORITY_MODIFIERS = ['best', 'premium', 'leading', 'trusted', 'professional']
+// const PRIORITY_MODIFIERS = ['best']
 
 /**
  * India-only services (cannot be used with non-India cities)
@@ -56,7 +56,7 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
   const allServices = [
     ...marketplaceServices,
     ...websiteTypes,
-    ...digitalMarketingTypes,
+    // ...digitalMarketingTypes,
     ...mainServices.map(service => ({
       ...service,
       slug: service.path.replace('/service/', ''),
@@ -74,14 +74,14 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
     }
 
     // Only include priority modifiers for services
-    for (const modifierKey of PRIORITY_MODIFIERS) {
-      yield {
-        url: `${baseUrl}/service/${modifierKey}-${service.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 0.75,
-      }
-    }
+    // for (const modifierKey of PRIORITY_MODIFIERS) {
+    //   yield {
+    //     url: `${baseUrl}/service/${modifierKey}-${service.slug}`,
+    //     lastModified: new Date(),
+    //     changeFrequency: 'weekly' as const,
+    //     priority: 0.75,
+    //   }
+    // }
   }
 
   // Services that have city pages: all services now included
@@ -111,14 +111,14 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
       }
 
       // Service + modifier + city (only priority modifiers)
-      for (const modifierKey of PRIORITY_MODIFIERS) {
-        yield {
-          url: `${baseUrl}/service/${modifierKey}-${service.slug}/${citySlug}`,
-          lastModified: new Date(),
-          changeFrequency: 'monthly' as const,
-          priority: 0.55,
-        }
-      }
+      // for (const modifierKey of PRIORITY_MODIFIERS) {
+      //   yield {
+      //     url: `${baseUrl}/service/${modifierKey}-${service.slug}/${citySlug}`,
+      //     lastModified: new Date(),
+      //     changeFrequency: 'monthly' as const,
+      //     priority: 0.55,
+      //   }
+      // }
     }
   }
 
