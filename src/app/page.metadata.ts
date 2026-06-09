@@ -66,7 +66,7 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     verification: {
-      google: 'u0mNTg9xeHNXsIR_w0xqclaSpANLJiPg7Swm0SxedNM',
+      google: 'yUHbVOyQLHBvxCV8Bo6wNCaaynb3xODUDLNSQ9xwKbo',
       yandex: 'your-yandex-verification-code',
       other: {
         'msvalidate.01': 'your-bing-verification-code',
