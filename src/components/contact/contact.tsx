@@ -217,7 +217,7 @@ const Contact = () => {
                                 required
                                 pattern="[6-9][0-9]{9}"
                                 maxLength={10}
-                                title="Please enter a valid 10-digit number starting with 6-9"
+                                title="Enter mobile number"
                                 aria-label="Your phone number"
                                 aria-describedby="phone-error"
                             />
