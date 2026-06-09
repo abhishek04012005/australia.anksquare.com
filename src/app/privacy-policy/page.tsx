@@ -1,6 +1,9 @@
 import { Metadata } from 'next'
 import { contact } from '@/data/details'
 
+// ISR: Revalidate privacy policy every 90 days (7776000 seconds) - legal document
+export const revalidate = 7776000
+
 export const metadata: Metadata = {
   title: 'Privacy Policy - Ank Square Digital Services',
   description: 'Learn how Ank Square protects your privacy and handles your personal information. Our comprehensive privacy policy covers data collection, usage, and protection practices.',
@@ -8,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Privacy Policy - Ank Square',
     description: 'Your privacy matters to us. Read our privacy policy to understand how we protect your data.',
-    url: 'https://www.anksquare.in/privacy-policy',
+    url: 'https://usa.anksquare.com/privacy-policy',
     type: 'website',
   },
   twitter: {
@@ -127,11 +130,11 @@ export default function PrivacyPolicyPage() {
               '@type': 'WebPage',
               name: 'Privacy Policy - Ank Square',
               description: 'Privacy policy and data protection information for Ank Square digital service',
-              url: 'https://www.anksquare.in/privacy-policy',
+              url: 'https://usa.anksquare.com/privacy-policy',
               mainEntity: {
                 '@type': 'Organization',
                 name: 'Ank Square',
-                url: 'https://www.anksquare.in',
+                url: 'https://usa.anksquare.com',
                 contactPoint: {
                   '@type': 'ContactPoint',
                   email: contact.email,

@@ -4,6 +4,9 @@ import { FaStar, FaQuoteLeft } from 'react-icons/fa'
 import { testimonials } from '@/data/testimonial'
 import styles from './page.module.css'
 
+// ISR: Revalidate testimonials page every 90 days (7776000 seconds)
+export const revalidate = 7776000
+
 export const metadata: Metadata = {
   title: 'Client Testimonials - What Our Customers Say About Ank Square',
   description: 'Read genuine testimonials from our satisfied clients. Discover how Ank Square has helped businesses succeed with merchant account management, website development, and digital marketing service.',
@@ -11,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Client Testimonials - Ank Square Success Stories',
     description: 'Real testimonials from businesses that have grown with Ank Square. See how our service have made a difference.',
-    url: 'https://www.anksquare.in/testimonial',
+    url: 'https://usa.anksquare.com/testimonial',
     type: 'website',
   },
   twitter: {
@@ -166,7 +169,7 @@ export default function TestimonialPage() {
               '@type': 'WebPage',
               name: 'Client Testimonials - Ank Square',
               description: 'Read genuine testimonials from Ank Square clients about our digital service',
-              url: 'https://www.anksquare.in/testimonial',
+              url: 'https://usa.anksquare.com/testimonial',
               mainEntity: {
                 '@type': 'Organization',
                 name: 'Ank Square',

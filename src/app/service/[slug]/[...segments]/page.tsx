@@ -8,7 +8,7 @@ import {
 
 import CityServiceClient from './city-service-client'
 
-import { getCityFromPath } from '../../../../seo/cities'
+import { getCityFromPath } from '../../../../seo/us'
 
 import {
   extractServiceModifier,
@@ -135,7 +135,7 @@ export async function generateMetadata({
       openGraph: {
         title,
         description,
-        url: `https://www.anksquare.in/service/${resolvedParams.slug}/${resolvedParams.segments.join('/')}`,
+        url: `https://usa.anksquare.com/service/${resolvedParams.slug}/${resolvedParams.segments.join('/')}`,
         type: 'website'
       },
 
@@ -170,7 +170,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `https://www.anksquare.in/service/${resolvedParams.slug}`,
+      url: `https://usa.anksquare.com/service/${resolvedParams.slug}`,
       type: 'website'
     },
 

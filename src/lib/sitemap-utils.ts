@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { marketplaceServices, websiteTypes, mainServices } from '@/data/service'
-import { cities, createCitySlug } from '@/seo/cities'
+import { cities, createCitySlug } from '@/seo/us'
 import { blogPosts } from '@/data/blog'
 import { SERVICE_MODIFIERS } from '@/seo/serviceModifiers'
 
@@ -35,7 +35,7 @@ const INDIA_ONLY_SERVICE_SLUGS = new Set([
  * Generator for sitemap URLs - yields URLs one at a time to reduce memory usage
  */
 export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
-  const baseUrl = 'https://www.anksquare.in'
+  const baseUrl = 'https://usa.anksquare.com'
 
   // Static pages
   const staticPages: SitemapUrl[] = [

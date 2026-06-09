@@ -52,7 +52,7 @@ ${urlEntries.join('\n')}
     }
     
     // If multiple chunks, return sitemap index
-    const baseUrl = 'https://www.anksquare.in'
+    const baseUrl = 'https://usa.anksquare.com'
     const sitemapIndexEntries: string[] = []
     
     for (let i = 1; i <= chunkCount; i++) {

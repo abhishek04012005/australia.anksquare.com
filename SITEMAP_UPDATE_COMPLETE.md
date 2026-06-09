@@ -250,7 +250,7 @@ All URLs remain fully accessible:
 ## 🔍 Post-Deployment Actions
 
 1. **Submit to Search Engines**
-   - Google Search Console: Submit `https://www.anksquare.in/sitemap.xml`
+   - Google Search Console: Submit `https://usa.anksquare.com/sitemap.xml`
    - Bing Webmaster Tools: Submit same URL
    - Yandex: Submit if applicable
 

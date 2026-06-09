@@ -3,9 +3,12 @@ import { generateSEO, seoConfigs } from '@/lib/seo';
 import About from '@/components/about/about';
 import { details } from '@/data/details';
 
+// ISR: Revalidate about page every 90 days (7776000 seconds)
+export const revalidate = 7776000
+
 export const metadata: Metadata = generateSEO({
   ...seoConfigs.about,
-  url: 'https://www.anksquare.in/about',
+  url: 'https://usa.anksquare.com/about',
   image: '/og-image-about.jpg',
 });
 
@@ -15,7 +18,7 @@ const aboutPageSchema = {
   "@type": "AboutPage",
   "name": "About Ank Square - Digital Services Expert",
   "description": details.about.missionStatement,
-  "url": "https://www.anksquare.in/about",
+  "url": "https://usa.anksquare.com/about",
   "mainEntity": {
     "@type": "Organization",
     "name": details.profile.nameCompany,
@@ -27,7 +30,7 @@ const aboutPageSchema = {
       "description": details.about.shortBio
     },
     "foundingDate": "2019", // Based on 5+ years experience
-    "url": "https://www.anksquare.in",
+    "url": "https://usa.anksquare.com",
     "sameAs": [
       details.social.instagram,
       details.social.pinterest,
@@ -41,13 +44,13 @@ const aboutPageSchema = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.anksquare.in"
+        "item": "https://usa.anksquare.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": "https://www.anksquare.in/about"
+        "item": "https://usa.anksquare.com/about"
       }
     ]
   }

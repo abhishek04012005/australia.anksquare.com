@@ -11,11 +11,16 @@ interface BlogPostPageProps {
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-  // Return empty - all blog pages will be dynamic
-  return []
+  // Generate static params for all blog posts for ISR
+  return blogPosts.map(post => ({
+    slug: post.slug
+  }))
 }
 
 export const dynamicParams = true
+
+// ISR: Revalidate every 90 days (7776000 seconds)
+export const revalidate = 7776000
 
 // Generate metadata for each blog post
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
@@ -35,7 +40,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://www.anksquare.in/blog/${post.slug}`,
+      url: `https://usa.anksquare.com/blog/${post.slug}`,
       type: 'article',
       publishedTime: new Date(post.date).toISOString(),
       authors: [post.author],
@@ -54,7 +59,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: [post.image],
     },
     alternates: {
-      canonical: `https://www.anksquare.in/blog/${post.slug}`,
+      canonical: `https://usa.anksquare.com/blog/${post.slug}`,
     },
   }
 }
@@ -82,14 +87,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       "name": "Ank Square",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.anksquare.in/logo.png"
+        "url": "https://usa.anksquare.com/logo.png"
       }
     },
     "datePublished": new Date(post.date).toISOString(),
     "dateModified": new Date(post.date).toISOString(),
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://www.anksquare.in/blog/${post.slug}`
+      "@id": `https://usa.anksquare.com/blog/${post.slug}`
     }
   }
 

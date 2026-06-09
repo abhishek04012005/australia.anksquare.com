@@ -1,6 +1,9 @@
 import { Metadata } from 'next'
 import Clients from '@/components/clients/clients'
 
+// ISR: Revalidate clients page every 90 days (7776000 seconds)
+export const revalidate = 7776000
+
 export const metadata: Metadata = {
   title: 'Our Clients - Successful Projects by Ank Square',
   description: 'Discover the diverse portfolio of clients we have worked with. From startups to established businesses, see how Ank Square delivered exceptional digital solutions.',
@@ -8,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Our Clients - Ank Square Portfolio',
     description: 'Explore our client success stories and completed projects. See the impact of our digital service.',
-    url: 'https://www.anksquare.in/client',
+    url: 'https://usa.anksquare.com/client',
     type: 'website',
   },
   twitter: {
@@ -37,13 +40,13 @@ export default function ClientsPage() {
               '@type': 'CollectionPage',
               name: 'Ank Square Clients',
               description: 'Portfolio of successful projects and clients served by Ank Square',
-              url: 'https://www.anksquare.in/client',
+              url: 'https://usa.anksquare.com/client',
               mainEntity: {
                 '@type': 'Organization',
                 name: 'Ank Square',
-                url: 'https://www.anksquare.in',
+                url: 'https://usa.anksquare.com',
                 description: 'Digital service company providing merchant account management, website development, and digital marketing solutions',
-                logo: 'https://www.anksquare.in/logo.svg'
+                logo: 'https://usa.anksquare.com/logo.svg'
               }
             }),
           }}

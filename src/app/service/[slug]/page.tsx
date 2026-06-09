@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${modifiedTitle} Services - Ank Square`,
       description: service.details.overview,
-      url: `https://www.anksquare.in/service/${resolvedParams.slug}`,
+      url: `https://usa.anksquare.com/service/${resolvedParams.slug}`,
       type: 'website',
     },
     twitter: {
@@ -63,11 +63,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export function generateStaticParams() {
-  // Return empty array for dynamic rendering
-  return []
+  // Generate static params for all services for ISR
+  return allServices.map(service => ({
+    slug: service.slug
+  }))
 }
 
 export const dynamicParams = true
+
+// ISR: Revalidate every 90 days (7776000 seconds)
+export const revalidate = 7776000
 
 export default async function ServiceDetailPage({ params }: Props) {
   const resolvedParams = await params

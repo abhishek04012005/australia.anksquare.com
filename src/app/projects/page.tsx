@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import ProjectsClient from './ProjectsClient'
 
+// ISR: Revalidate projects page every 90 days (7776000 seconds)
+export const revalidate = 7776000
+
 export const metadata: Metadata = {
   title: 'Our Projects & Services - Ank Square',
   description: 'Explore Ank Square\'s comprehensive portfolio of digital services including merchant account management, website development, digital marketing, and marketplace optimization for Amazon, Flipkart, and more.',
@@ -18,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Our Projects & Services - Ank Square',
     description: 'Discover our expertise in digital transformation, marketplace management, and custom development solutions.',
-    url: 'https://www.anksquare.in/projects',
+    url: 'https://usa.anksquare.com/projects',
     type: 'website',
   },
   twitter: {

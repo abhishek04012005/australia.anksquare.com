@@ -1,6 +1,9 @@
 import { Metadata } from 'next'
 import { contact } from '@/data/details'
 
+// ISR: Revalidate terms & conditions every 90 days (7776000 seconds) - legal document
+export const revalidate = 7776000
+
 export const metadata: Metadata = {
   title: 'Terms & Conditions - Ank Square Digital Services',
   description: 'Read our terms and conditions for using Ank Square service. Understand your rights and responsibilities when working with our digital solutions.',
@@ -8,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Terms & Conditions - Ank Square',
     description: 'Legal terms and conditions for Ank Square digital service and client agreements.',
-    url: 'https://www.anksquare.in/terms-and-conditions',
+    url: 'https://usa.anksquare.com/terms-and-conditions',
     type: 'website',
   },
   twitter: {
@@ -143,11 +146,11 @@ export default function TermsAndConditionsPage() {
               '@type': 'WebPage',
               name: 'Terms & Conditions - Ank Square',
               description: 'Legal terms and conditions for Ank Square digital service',
-              url: 'https://www.anksquare.in/terms-and-conditions',
+              url: 'https://usa.anksquare.com/terms-and-conditions',
               mainEntity: {
                 '@type': 'Organization',
                 name: 'Ank Square',
-                url: 'https://www.anksquare.in',
+                url: 'https://usa.anksquare.com',
                 contactPoint: {
                   '@type': 'ContactPoint',
                   email: contact.email,

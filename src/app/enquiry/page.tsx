@@ -13,6 +13,9 @@ import {
   Chat,
 } from '@mui/icons-material'
 
+// ISR: Revalidate enquiry page every 90 days (7776000 seconds)
+export const revalidate = 7776000
+
 export const metadata: Metadata = {
   title: 'Enquiry - Get Started with Ank Square Services',
   description: 'Contact Ank Square for professional e-commerce account management, website development, and digital marketing services. Get a free consultation today.',
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Enquiry - Get Started with Ank Square',
     description: 'Ready to grow your business? Contact us for expert e-commerce and digital marketing solutions.',
-    url: 'https://www.anksquare.in/enquiry',
+    url: 'https://usa.anksquare.com/enquiry',
     type: 'website',
   },
 }

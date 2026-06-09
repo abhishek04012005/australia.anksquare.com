@@ -1,6 +1,9 @@
 import { Metadata } from 'next'
 import Services from '@/components/service/service'
 
+// ISR: Revalidate service index every 90 days (7776000 seconds)
+export const revalidate = 7776000
+
 export const metadata: Metadata = {
   title: 'Our Services - E-commerce Solutions & Digital Marketing | Ank Square',
   description: 'Comprehensive digital service including merchant account management, website development, and digital marketing. Expert e-commerce solutions for Indian businesses across all major platforms.',
@@ -8,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Our Services - Complete Digital Solutions | Ank Square',
     description: 'Professional e-commerce account management, custom website development, and comprehensive digital marketing service for growing businesses.',
-    url: 'https://www.anksquare.in/service',
+    url: 'https://usa.anksquare.com/service',
     type: 'website',
   },
   twitter: {
@@ -36,11 +39,11 @@ export default function ServicesPage() {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Ank Square',
-              url: 'https://www.anksquare.in',
+              url: 'https://usa.anksquare.com',
               description: 'Leading digital service company providing e-commerce account management, website development, and digital marketing solutions for businesses in India',
               serviceType: ['E-commerce Management', 'Web Development', 'Digital Marketing'],
               areaServed: 'India',
-              logo: 'https://www.anksquare.in/logo.svg',
+              logo: 'https://usa.anksquare.com/logo.svg',
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: '+91-XXXXXXXXXX',
