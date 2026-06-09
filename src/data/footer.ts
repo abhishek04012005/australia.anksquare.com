@@ -11,18 +11,19 @@ export const quickLinks = [
 ]
 
 export const webdevelopment = [
-    { name: 'Business Website', href: '/service/business-website' },
+    { name: 'Construction Website', href: '/service/construction' },
     { name: 'E-commerce Website', href: '/service/ecommerce-website' },
-    { name: 'Real Estate Website', href: '/service/real-estate-website' },
+    { name: 'Interior Design Website', href: '/service/interior' },
+    { name: 'Astrology Website', href: '/service/astrology' }
 ]
 
 export const accountmanagement = [
     { name: 'Amazon', href: '/service/amazon-account-management' },
-    { name: 'Flipkart', href: '/service/flipkart-account-management' },
-    { name: 'Blinkit', href: '/service/blinkit-account-management' },
-    { name: 'Myntra', href: '/service/myntra-account-management' },
-    { name: 'Meesho', href: '/service/meesho-account-management' },
-    { name: 'Ajio', href: '/service/ajio-account-management' },
-    { name: 'JioMart', href: '/service/jiomart-account-management' },
-    { name: 'Nykaa', href: '/service/nykaa-account-management' }
+    // { name: 'Flipkart', href: '/service/flipkart-account-management' },
+    // { name: 'Blinkit', href: '/service/blinkit-account-management' },
+    // { name: 'Myntra', href: '/service/myntra-account-management' },
+    // { name: 'Meesho', href: '/service/meesho-account-management' },
+    // { name: 'Ajio', href: '/service/ajio-account-management' },
+    // { name: 'JioMart', href: '/service/jiomart-account-management' },
+    // { name: 'Nykaa', href: '/service/nykaa-account-management' }
 ]
