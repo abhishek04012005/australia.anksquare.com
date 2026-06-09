@@ -238,7 +238,7 @@ export default function EnquiryModal({
 
                   value={formData.phone}
 
-                  placeholder="Enter mobile number"
+                  placeholder="Enter phone number (e.g.,+12025551234)"
 
                   onChange={e => {
 

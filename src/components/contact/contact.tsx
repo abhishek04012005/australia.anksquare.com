@@ -71,22 +71,45 @@ const Contact = () => {
 
         // Validation for phone number
         if (name === 'number') {
-            // Check if starts with valid digits and has correct length
-            if (!/^[6-9]\d{0,9}$/.test(value)) {
-                setErrors(prev => ({
-                    ...prev,
-                    number: 'Enter valid 10-digit number starting with 6-9'
-                }))
-                // Allow input only if it's empty or matches pattern
-                if (value && !/^[6-9]\d*$/.test(value)) {
-                    return
-                }
-            } else {
+            // Support USA (+1 + 10 digits) and international numbers (7-14 digits with optional +)
+            // Allow digits and + only
+            if (!/^[\d+]*$/.test(value)) {
+                return
+            }
+            // Remove all + symbols except first
+            let cleanValue = value
+            if (cleanValue.includes('+')) {
+                cleanValue = '+' + cleanValue.replace(/\+/g, '')
+            }
+            // Prevent + anywhere except beginning
+            if (cleanValue.lastIndexOf('+') > 0) {
+                return
+            }
+            // Limit to 15 digits
+            const digitsOnly = cleanValue.replace(/\D/g, '')
+            if (digitsOnly.length > 15) {
+                return
+            }
+            
+            // Validation check
+            const phoneValid = /^(\+1)?\d{10}$|^\+[1-9]\d{7,14}$/.test(cleanValue)
+            if (!cleanValue || phoneValid) {
                 setErrors(prev => ({
                     ...prev,
                     number: ''
                 }))
+            } else {
+                setErrors(prev => ({
+                    ...prev,
+                    number: 'Enter valid phone number (10 digits for USA or international format)'
+                }))
             }
+            
+            setFormData(prev => ({
+                ...prev,
+                number: cleanValue
+            }))
+            return
         }
 
         setFormData(prev => ({
@@ -211,17 +234,19 @@ const Contact = () => {
                                 id="phone-input"
                                 type="tel"
                                 name="number"
-                                placeholder="Your Number"
+                                placeholder="Your Number (e.g., 2025551234 or +12025551234)"
                                 value={formData.number}
                                 onChange={handleChange}
                                 required
-                                pattern="[6-9][0-9]{9}"
-                                maxLength={10}
-                                title="Enter mobile number"
+                                maxLength={16}
+                                title="Enter phone number"
                                 aria-label="Your phone number"
                                 aria-describedby="phone-error"
                             />
                             {errors.number && <span id="phone-error" className={styles.errorText}>{errors.number}</span>}
+                            <small style={{ fontSize: '0.85rem', color: '#666', marginTop: '0.25rem', display: 'block' }}>
+                                USA (10 digits) or international format (+ country code + number, max 15 digits)
+                            </small>
                         </div>
                         <div className={styles.formGroup}>
                             <label htmlFor="message-input">Message *</label>

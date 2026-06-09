@@ -50,12 +50,13 @@ export default function EnquiryForm() {
     e.preventDefault()
 
     const nameValid = /^[A-Za-z\s]+$/.test(formData.name.trim())
-    const phoneValid = /^[6-9]\d{9}$/.test(formData.phone)
+    // Support USA (+1 + 10 digits) and international numbers (7-14 digits with optional +)
+    const phoneValid = /^(\+1)?\d{10}$|^\+[1-9]\d{7,14}$/.test(formData.phone)
 
     if (!nameValid || !phoneValid || !formData.service) {
       setErrors({
         name: nameValid ? '' : 'Please enter a valid name',
-        phone: phoneValid ? '' : 'Please enter a valid 10-digit number'
+        phone: phoneValid ? '' : 'Please enter a valid phone number (10 digits for USA or international format)'
       })
       return
     }
@@ -141,15 +142,33 @@ export default function EnquiryForm() {
                 type="tel"
                 id="phone"
                 value={formData.phone}
-                onChange={e => setFormData(prev => ({ ...prev, phone: e.target.value.replace(/\D/g, '').slice(0, 10) }))}
+                onChange={e => {
+                  let value = e.target.value
+                  // Allow only digits and +
+                  value = value.replace(/[^\d+]/g, '')
+                  // Remove all + symbols except first
+                  if (value.includes('+')) {
+                    value = '+' + value.replace(/\+/g, '')
+                  }
+                  // Prevent + anywhere except beginning
+                  if (value.lastIndexOf('+') > 0) {
+                    return
+                  }
+                  // Limit to 15 digits
+                  const digitsOnly = value.replace(/\D/g, '')
+                  if (digitsOnly.length > 15) {
+                    return
+                  }
+                  setFormData(prev => ({ ...prev, phone: value }))
+                }}
                 className={`${styles.input} ${errors.phone ? styles.error : ''}`}
-                placeholder="Enter 10-digit mobile number"
-                maxLength={10}
+                placeholder="Enter phone number (e.g., 2025551234 or +12025551234)"
+                maxLength={16}
                 required
               />
               {errors.phone && <span className={styles.errorText}>{errors.phone}</span>}
               <small className={styles.helpText}>
-                We will contact you on this number
+                USA (10 digits) or international format (+ country code + number)
               </small>
             </div>
 
