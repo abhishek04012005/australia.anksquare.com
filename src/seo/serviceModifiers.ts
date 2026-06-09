@@ -1,8 +1,8 @@
 /**
  * Service Modifiers Configuration
  * Handles routing for URLs like:
- * - /services/best-digital-presence/peddapuram/andhra-pradesh/india/
- * - /services/digital-presence/peddapuram/andhra-pradesh/india/
+ * - /services/best-digital-presence/peddapuram/andhra-pradesh/usa/
+ * - /services/digital-presence/peddapuram/andhra-pradesh/usa/
  */
 
 export interface ServiceModifier {

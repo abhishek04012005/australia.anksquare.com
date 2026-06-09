@@ -82,7 +82,7 @@ export const details = {
       street: 'Ank Square Pvt. Ltd., Ramjaipal Road, Opp. Gola Road, Near Hotel Magadh Palace',
       city: 'Patna',
       state: 'Bihar',
-      country: 'India',
+      country: 'usa',
       zipCode: '801503',
     },
     timezone: 'IST (Indian Standard Time)',

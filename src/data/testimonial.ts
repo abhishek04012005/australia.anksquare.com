@@ -51,7 +51,7 @@ export const testimonials: TestimonialItem[] = [
   {
     id: 5,
     name: 'Abbas',
-    position: 'Kaminomoto India',
+    position: 'Kaminomoto',
     image: maleImage,
     quote:
       'Thanks to Ank Square, our seller accounts are now professionally managed. They handle listings, updates, and platform coordination so we can focus on growing our brand.',

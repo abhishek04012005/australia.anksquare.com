@@ -44,7 +44,7 @@ export default function TestimonialPage() {
             <p
               className={styles.heroDescription}
             >
-              Discover how Ank Square has helped businesses across India achieve their digital goals.
+              Discover how Ank Square has helped businesses across usa achieve their digital goals.
               Read genuine testimonials from our satisfied clients.
             </p>
             <div

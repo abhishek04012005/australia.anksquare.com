@@ -131,7 +131,7 @@ for (const url of generateSitemapUrlsGenerator()) {
    ```
    - Yields URLs individually
    - Processes cities in streaming fashion
-   - Checks India-only restrictions
+   - Checks usa-only restrictions
 
 2. **Chunking Optimization**
    ```typescript
@@ -190,7 +190,7 @@ for (const url of generateSitemapUrlsGenerator()) {
 3. **City Service Pages** (3.1M+ URLs)
    - Base city pages: 17 × 37K = 629K URLs
    - City pages with modifiers: 5 × 17 × 37K = 3.15M URLs
-   - India-only service filtering applied
+   - usa-only service filtering applied
 
 4. **Client Pages** (4 URLs)
    - Individual client project showcases
@@ -201,9 +201,9 @@ for (const url of generateSitemapUrlsGenerator()) {
 ### Routing Access
 
 All URLs remain fully accessible:
-- `/service/digital-marketing/peddapuram/andhra-pradesh/india/` ✅
-- `/service/best-digital-marketing/peddapuram/andhra-pradesh/india/` ✅
-- `/service/premium-digital-marketing/peddapuram/andhra-pradesh/india/` ✅
+- `/service/digital-marketing/peddapuram/andhra-pradesh/usa/` ✅
+- `/service/best-digital-marketing/peddapuram/andhra-pradesh/usa/` ✅
+- `/service/premium-digital-marketing/peddapuram/andhra-pradesh/usa/` ✅
 - Other modifiers still accessible via routing, just not in sitemap
 
 ---

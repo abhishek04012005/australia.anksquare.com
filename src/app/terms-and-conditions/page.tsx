@@ -117,7 +117,7 @@ export default function TermsAndConditionsPage() {
 
             <h3 style={{ color: '#213f61', marginBottom: '1rem', fontSize: '1.5rem' }}>8. Governing Law</h3>
             <p style={{ marginBottom: '2rem' }}>
-              These terms and conditions are governed by and construed in accordance with the laws of India.
+              These terms and conditions are governed by and construed in accordance with the laws of usa.
             </p>
 
             <h3 style={{ color: '#213f61', marginBottom: '1rem', fontSize: '1.5rem' }}>9. Changes to Terms</h3>

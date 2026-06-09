@@ -26,9 +26,11 @@ export default function Navbar() {
     const trackWhatsAppClick = async () => {
         try {
             const clickData = {
+                domain: 'usa.anksquare.com',
                 user_agent: navigator.userAgent,
                 referrer: document.referrer,
                 page_url: window.location.href,
+                full_url: `https://usa.anksquare.com${window.location.pathname}`,
                 device_type: /Mobile|Android|iP(hone|od|ad)/.test(navigator.userAgent) ? 'mobile' : 'desktop',
                 browser_info: {
                     language: navigator.language,

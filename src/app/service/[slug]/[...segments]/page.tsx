@@ -43,8 +43,8 @@ const allServices = [
   }))
 ]
 
-// India-only services - these services can only be accessed from India
-// Full service slugs that are restricted to India only
+// usa-only services - these services can only be accessed from usa
+// Full service slugs that are restricted to usa only
 const indiaOnlyServices = [
   'flipkart-account-management',
   'blinkit-account-management',
@@ -65,7 +65,7 @@ function isRestrictedOutsideIndia(
   return (
     indiaOnlyServices.includes(serviceSlug) &&
     city &&
-    city.country.toLowerCase() !== 'india'
+    city.country.toLowerCase() !== 'usa'
   )
 }
 
@@ -95,7 +95,7 @@ export async function generateMetadata({
     }
   }
 
-  // Restrict India-only services
+  // Restrict usa-only services
   if (isRestrictedOutsideIndia(serviceSlug, city)) {
     return {
       title: 'Page Not Found',
@@ -213,7 +213,7 @@ export default async function CityServicePage({
     notFound()
   }
 
-  // Restrict India-only services
+  // Restrict usa-only services
   if (isRestrictedOutsideIndia(serviceSlug, city)) {
     notFound()
   }

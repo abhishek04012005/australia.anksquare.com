@@ -18,8 +18,8 @@ export interface SitemapUrl {
 // const PRIORITY_MODIFIERS = ['best']
 
 /**
- * India-only services (cannot be used with non-India cities)
- * Only generate URLs for these services when city.country === 'India'
+ * usa-only services (cannot be used with non-usa cities)
+ * Only generate URLs for these services when city.country === 'usa'
  */
 const INDIA_ONLY_SERVICE_SLUGS = new Set([
   'flipkart-account-management',
@@ -95,8 +95,8 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
     for (let i = 0; i < cities.length; i++) {
       const city = cities[i]
       
-      // Skip India-only services for non-India cities
-      if (isIndiaOnlyService && city.country.toLowerCase() !== 'india') {
+      // Skip usa-only services for non-usa cities
+      if (isIndiaOnlyService && city.country.toLowerCase() !== 'usa') {
         continue
       }
 
