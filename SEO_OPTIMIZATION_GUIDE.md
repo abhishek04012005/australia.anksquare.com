@@ -154,9 +154,9 @@ H3: Subsection titles (Features, Benefits)
 </div>
 
 // Screen reader text
-<a href="#main-content" className="sr-only">
-  Skip to main content
-</a>
+// <a href="#main-content" className="sr-only">
+//   Skip to main content
+// </a>
 
 // Stats labeling
 <div aria-label="Company statistics">

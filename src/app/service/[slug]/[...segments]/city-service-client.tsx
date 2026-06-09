@@ -44,7 +44,7 @@ export default function CityServiceClient({ service, city, citySlug }: CityServi
   return (
     <>
       {/* Skip to main content link for accessibility */}
-      <a href="#main-content" className="sr-only">Skip to main content</a>
+      {/* <a href="#main-content" className="sr-only">Skip to main content</a> */}
 
       <main id="main-content" role="main">
         {/* Service Header - with or without city */}
