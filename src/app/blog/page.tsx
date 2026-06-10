@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Digital Marketing Blog & E-commerce Insights | Ank Square',
     description: 'Expert articles on digital marketing, e-commerce trends, SEO strategies, and online business growth. Stay ahead with Ank Square\'s latest insights.',
-    url: 'https://usa.anksquare.com/blog',
+    url: 'https://uk.anksquare.com/blog',
     type: 'website',
   },
   twitter: {

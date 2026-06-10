@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${modifiedTitle} Services - Ank Square`,
       description: service.details.overview,
-      url: `https://usa.anksquare.com/service/${resolvedParams.slug}`,
+      url: `https://uk.anksquare.com/service/${resolvedParams.slug}`,
       type: 'website',
     },
     twitter: {

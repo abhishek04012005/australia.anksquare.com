@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Our Projects & Services - Ank Square',
     description: 'Discover our expertise in digital transformation, marketplace management, and custom development solutions.',
-    url: 'https://usa.anksquare.com/projects',
+    url: 'https://uk.anksquare.com/projects',
     type: 'website',
   },
   twitter: {

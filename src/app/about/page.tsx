@@ -8,7 +8,7 @@ export const revalidate = 7776000
 
 export const metadata: Metadata = generateSEO({
   ...seoConfigs.about,
-  url: 'https://usa.anksquare.com/about',
+  url: 'https://uk.anksquare.com/about',
   image: '/og-image-about.jpg',
 });
 
@@ -18,7 +18,7 @@ const aboutPageSchema = {
   "@type": "AboutPage",
   "name": "About Ank Square - Digital Services Expert",
   "description": details.about.missionStatement,
-  "url": "https://usa.anksquare.com/about",
+  "url": "https://uk.anksquare.com/about",
   "mainEntity": {
     "@type": "Organization",
     "name": details.profile.nameCompany,
@@ -30,7 +30,7 @@ const aboutPageSchema = {
       "description": details.about.shortBio
     },
     "foundingDate": "2019", // Based on 5+ years experience
-    "url": "https://usa.anksquare.com",
+    "url": "https://uk.anksquare.com",
     "sameAs": [
       details.social.instagram,
       details.social.pinterest,
@@ -44,13 +44,13 @@ const aboutPageSchema = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://usa.anksquare.com"
+        "item": "https://uk.anksquare.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": "https://usa.anksquare.com/about"
+        "item": "https://uk.anksquare.com/about"
       }
     ]
   }

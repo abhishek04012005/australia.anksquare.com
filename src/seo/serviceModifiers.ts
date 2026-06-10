@@ -1,8 +1,8 @@
 /**
  * Service Modifiers Configuration
  * Handles routing for URLs like:
- * - /services/best-digital-presence/peddapuram/andhra-pradesh/usa/
- * - /services/digital-presence/peddapuram/andhra-pradesh/usa/
+ * - /services/best-digital-presence/peddapuram/andhra-pradesh/india/
+ * - /services/digital-presence/peddapuram/andhra-pradesh/india/
  */
 
 export interface ServiceModifier {
@@ -20,7 +20,298 @@ export const SERVICE_MODIFIERS: Record<string, ServiceModifier> = {
     titlePrefix: "Best",
     description: "Premium & Most Recommended",
     searchTerm: "best",
-  }
+  },
+  premium: {
+    key: "premium",
+    label: "Premium",
+    titlePrefix: "Premium",
+    description: "High-end & Advanced Solutions",
+    searchTerm: "premium",
+  },
+  leading: {
+    key: "leading",
+    label: "Leading",
+    titlePrefix: "Leading",
+    description: "Top-of-the-line & Industry-leading",
+    searchTerm: "leading",
+  },
+  trusted: {
+    key: "trusted",
+    label: "Trusted",
+    titlePrefix: "Trusted",
+    description: "Reliable & Well-Established",
+    searchTerm: "trusted",
+  },
+  starter: {
+    key: "starter",
+    label: "Starter",
+    titlePrefix: "Starter",
+    description: "Perfect for beginners",
+    searchTerm: "starter",
+  },
+  professional: {
+    key: "professional",
+    label: "Professional",
+    titlePrefix: "Professional",
+    description: "Enterprise-grade solutions",
+    searchTerm: "professional",
+  },
+  advanced: {
+    key: "advanced",
+    label: "Advanced",
+    titlePrefix: "Advanced",
+    description: "Feature-rich & Comprehensive",
+    searchTerm: "advanced",
+  },
+  "no-1": {
+    key: "no-1",
+    label: "No. 1",
+    titlePrefix: "No. 1",
+    description: "India's Most Trusted & Recommended",
+    searchTerm: "no-1",
+  },
+  "fast-growing": {
+    key: "fast-growing",
+    label: "Fast-Growing",
+    titlePrefix: "Fast-Growing",
+    description: "Rapidly Expanding & Trending",
+    searchTerm: "fast-growing",
+  },
+  popular: {
+    key: "popular",
+    label: "Popular",
+    titlePrefix: "Popular",
+    description: "Highly Requested & Well-Liked",
+    searchTerm: "popular",
+  },
+  experienced: {
+    key: "experienced",
+    label: "Experienced",
+    titlePrefix: "Experienced",
+    description: "Well-Seasoned & Expertise-Driven",
+    searchTerm: "experienced",
+  },
+  instant: {
+    key: "instant",
+    label: "Instant",
+    titlePrefix: "Instant",
+    description: "Quick & Efficient Solutions",
+    searchTerm: "instant",
+  },
+  "near-me": {
+    key: "near-me",
+    label: "Near Me",
+    titlePrefix: "Near Me",
+    description: "Locally Available & Convenient",
+    searchTerm: "near-me",
+  },
+    affordable: {
+    key: "affordable",
+    label: "Affordable",
+    titlePrefix: "Affordable",
+    description: "Budget-Friendly & Cost-Effective",
+    searchTerm: "affordable",
+  },
+
+  cheap: {
+    key: "cheap",
+    label: "Cheap",
+    titlePrefix: "Cheap",
+    description: "Low-Cost & Economical",
+    searchTerm: "cheap",
+  },
+
+  top: {
+    key: "top",
+    label: "Top",
+    titlePrefix: "Top",
+    description: "Highly Rated & Recommended",
+    searchTerm: "top",
+  },
+
+  toprated: {
+    key: "toprated",
+    label: "Top Rated",
+    titlePrefix: "Top Rated",
+    description: "Highest Customer Ratings",
+    searchTerm: "top rated",
+  },
+
+  expert: {
+    key: "expert",
+    label: "Expert",
+    titlePrefix: "Expert",
+    description: "Specialized Industry Experts",
+    searchTerm: "expert",
+  },
+
+  certified: {
+    key: "certified",
+    label: "Certified",
+    titlePrefix: "Certified",
+    description: "Verified & Certified Professionals",
+    searchTerm: "certified",
+  },
+
+  local: {
+    key: "local",
+    label: "Local",
+    titlePrefix: "Local",
+    description: "Available in Your Area",
+    searchTerm: "local",
+  },
+
+  nearby: {
+    key: "nearby",
+    label: "Nearby",
+    titlePrefix: "Nearby",
+    description: "Conveniently Located Services",
+    searchTerm: "nearby",
+  },
+
+  online: {
+    key: "online",
+    label: "Online",
+    titlePrefix: "Online",
+    description: "Remote & Digital Solutions",
+    searchTerm: "online",
+  },
+
+  verified: {
+    key: "verified",
+    label: "Verified",
+    titlePrefix: "Verified",
+    description: "Authentic & Trusted Providers",
+    searchTerm: "verified",
+  },
+
+  reliable: {
+    key: "reliable",
+    label: "Reliable",
+    titlePrefix: "Reliable",
+    description: "Dependable & Consistent",
+    searchTerm: "reliable",
+  },
+
+  exclusive: {
+    key: "exclusive",
+    label: "Exclusive",
+    titlePrefix: "Exclusive",
+    description: "Unique & Premium Offerings",
+    searchTerm: "exclusive",
+  },
+
+  customized: {
+    key: "customized",
+    label: "Customized",
+    titlePrefix: "Customized",
+    description: "Tailored to Your Needs",
+    searchTerm: "customized",
+  },
+
+  dedicated: {
+    key: "dedicated",
+    label: "Dedicated",
+    titlePrefix: "Dedicated",
+    description: "Focused & Personalized Service",
+    searchTerm: "dedicated",
+  },
+
+  innovative: {
+    key: "innovative",
+    label: "Innovative",
+    titlePrefix: "Innovative",
+    description: "Modern & Creative Solutions",
+    searchTerm: "innovative",
+  },
+
+  secure: {
+    key: "secure",
+    label: "Secure",
+    titlePrefix: "Secure",
+    description: "Safe & Protected Services",
+    searchTerm: "secure",
+  },
+
+  nationwide: {
+    key: "nationwide",
+    label: "Nationwide",
+    titlePrefix: "Nationwide",
+    description: "Available Across India",
+    searchTerm: "nationwide",
+  },
+
+  awardwinning: {
+    key: "awardwinning",
+    label: "Award Winning",
+    titlePrefix: "Award Winning",
+    description: "Recognized for Excellence",
+    searchTerm: "award winning",
+  },
+
+  sameDay: {
+    key: "same-day",
+    label: "Same Day",
+    titlePrefix: "Same Day",
+    description: "Fast Same-Day Service",
+    searchTerm: "same day",
+  },
+
+  emergency: {
+    key: "emergency",
+    label: "Emergency",
+    titlePrefix: "Emergency",
+    description: "24/7 Urgent Assistance",
+    searchTerm: "emergency",
+  },
+
+  "24x7": {
+    key: "24x7",
+    label: "24×7",
+    titlePrefix: "24×7",
+    description: "Round-the-Clock Support",
+    searchTerm: "24x7",
+  },
+
+  budget: {
+    key: "budget",
+    label: "Budget",
+    titlePrefix: "Budget",
+    description: "Cost-Conscious Solutions",
+    searchTerm: "budget",
+  },
+
+  luxury: {
+    key: "luxury",
+    label: "Luxury",
+    titlePrefix: "Luxury",
+    description: "Elite & Premium Experience",
+    searchTerm: "luxury",
+  },
+
+  recommended: {
+    key: "recommended",
+    label: "Recommended",
+    titlePrefix: "Recommended",
+    description: "Customer Recommended",
+    searchTerm: "recommended",
+  },
+
+  trending: {
+    key: "trending",
+    label: "Trending",
+    titlePrefix: "Trending",
+    description: "Currently Popular & Growing",
+    searchTerm: "trending",
+  },
+
+  guaranteed: {
+    key: "guaranteed",
+    label: "Guaranteed",
+    titlePrefix: "Guaranteed",
+    description: "Quality-Assured Services",
+    searchTerm: "guaranteed",
+  },
 };
 
 /**

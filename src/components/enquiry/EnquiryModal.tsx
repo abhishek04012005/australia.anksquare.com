@@ -117,7 +117,7 @@ export default function EnquiryModal({
 
             service: formData.service,
 
-            source: 'usa.anksquare.com',
+            source: 'uk.anksquare.com',
 
             status: 'pending'
           }
@@ -238,7 +238,7 @@ export default function EnquiryModal({
 
                   value={formData.phone}
 
-                  placeholder="Enter phone number (e.g.,+12025551234)"
+                  placeholder="Enter phone number (e.g.,+442025551234)"
 
                   onChange={e => {
 

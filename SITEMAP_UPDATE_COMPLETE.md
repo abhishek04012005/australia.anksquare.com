@@ -131,7 +131,7 @@ for (const url of generateSitemapUrlsGenerator()) {
    ```
    - Yields URLs individually
    - Processes cities in streaming fashion
-   - Checks usa-only restrictions
+   - Checks uk-only restrictions
 
 2. **Chunking Optimization**
    ```typescript
@@ -190,7 +190,7 @@ for (const url of generateSitemapUrlsGenerator()) {
 3. **City Service Pages** (3.1M+ URLs)
    - Base city pages: 17 × 37K = 629K URLs
    - City pages with modifiers: 5 × 17 × 37K = 3.15M URLs
-   - usa-only service filtering applied
+   - uk-only service filtering applied
 
 4. **Client Pages** (4 URLs)
    - Individual client project showcases
@@ -201,9 +201,9 @@ for (const url of generateSitemapUrlsGenerator()) {
 ### Routing Access
 
 All URLs remain fully accessible:
-- `/service/digital-marketing/peddapuram/andhra-pradesh/usa/` ✅
-- `/service/best-digital-marketing/peddapuram/andhra-pradesh/usa/` ✅
-- `/service/premium-digital-marketing/peddapuram/andhra-pradesh/usa/` ✅
+- `/service/digital-marketing/peddapuram/andhra-pradesh/uk/` ✅
+- `/service/best-digital-marketing/peddapuram/andhra-pradesh/uk/` ✅
+- `/service/premium-digital-marketing/peddapuram/andhra-pradesh/uk/` ✅
 - Other modifiers still accessible via routing, just not in sitemap
 
 ---
@@ -250,7 +250,7 @@ All URLs remain fully accessible:
 ## 🔍 Post-Deployment Actions
 
 1. **Submit to Search Engines**
-   - Google Search Console: Submit `https://usa.anksquare.com/sitemap.xml`
+   - Google Search Console: Submit `https://uk.anksquare.com/sitemap.xml`
    - Bing Webmaster Tools: Submit same URL
    - Yandex: Submit if applicable
 

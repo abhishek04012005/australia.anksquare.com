@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { marketplaceServices, websiteTypes, mainServices } from '@/data/service'
-import { cities, createCitySlug } from '@/seo/us'
+import { cities, createCitySlug } from '@/seo/uk'
 import { blogPosts } from '@/data/blog'
 import { SERVICE_MODIFIERS } from '@/seo/serviceModifiers'
 
@@ -15,11 +15,26 @@ export interface SitemapUrl {
  * Priority modifiers for sitemap optimization
  * Only these modifiers are included in the full sitemap
  */
-// const PRIORITY_MODIFIERS = ['best']
-
+const PRIORITY_MODIFIERS = [
+  'best',
+  'top',
+  'toprated',
+  'near-me',
+  'local',
+  'trusted',
+  'verified',
+  'expert',
+  'professional',
+  'certified',
+  'recommended',
+  'premium',
+  'popular',
+  'no-1',
+  'fast-growing',
+];
 /**
- * usa-only services (cannot be used with non-usa cities)
- * Only generate URLs for these services when city.country === 'usa'
+ * uk-only services (cannot be used with non-uk cities)
+ * Only generate URLs for these services when city.country === 'uk'
  */
 const INDIA_ONLY_SERVICE_SLUGS = new Set([
   'flipkart-account-management',
@@ -35,7 +50,7 @@ const INDIA_ONLY_SERVICE_SLUGS = new Set([
  * Generator for sitemap URLs - yields URLs one at a time to reduce memory usage
  */
 export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
-  const baseUrl = 'https://usa.anksquare.com'
+  const baseUrl = 'https://uk.anksquare.com'
 
   // Static pages
   const staticPages: SitemapUrl[] = [
@@ -47,7 +62,7 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
     { url: `${baseUrl}/privacy-policy`, lastModified: new Date(), changeFrequency: 'yearly' as const, priority: 0.3 },
     { url: `${baseUrl}/terms-and-conditions`, lastModified: new Date(), changeFrequency: 'yearly' as const, priority: 0.3 },
   ]
-  
+
   for (const page of staticPages) {
     yield page
   }
@@ -74,14 +89,14 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
     }
 
     // Only include priority modifiers for services
-    // for (const modifierKey of PRIORITY_MODIFIERS) {
-    //   yield {
-    //     url: `${baseUrl}/service/${modifierKey}-${service.slug}`,
-    //     lastModified: new Date(),
-    //     changeFrequency: 'weekly' as const,
-    //     priority: 0.75,
-    //   }
-    // }
+    for (const modifierKey of PRIORITY_MODIFIERS) {
+      yield {
+        url: `${baseUrl}/service/${modifierKey}-${service.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.75,
+      }
+    }
   }
 
   // Services that have city pages: all services now included
@@ -90,13 +105,13 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
   // Generate city pages with modifiers
   for (const service of servicesWithCityPages) {
     const isIndiaOnlyService = INDIA_ONLY_SERVICE_SLUGS.has(service.slug)
-    
+
     // Process cities in batches to reduce memory usage
     for (let i = 0; i < cities.length; i++) {
       const city = cities[i]
-      
-      // Skip usa-only services for non-usa cities
-      if (isIndiaOnlyService && city.country.toLowerCase() !== 'usa') {
+
+      // Skip uk-only services for non-uk cities
+      if (isIndiaOnlyService && city.country.toLowerCase() !== 'uk') {
         continue
       }
 
@@ -111,14 +126,14 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
       }
 
       // Service + modifier + city (only priority modifiers)
-      // for (const modifierKey of PRIORITY_MODIFIERS) {
-      //   yield {
-      //     url: `${baseUrl}/service/${modifierKey}-${service.slug}/${citySlug}`,
-      //     lastModified: new Date(),
-      //     changeFrequency: 'monthly' as const,
-      //     priority: 0.55,
-      //   }
-      // }
+      for (const modifierKey of PRIORITY_MODIFIERS) {
+        yield {
+          url: `${baseUrl}/service/${modifierKey}-${service.slug}/${citySlug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly' as const,
+          priority: 0.55,
+        }
+      }
     }
   }
 
@@ -129,7 +144,7 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
     'achintya-enterprises',
     'sl-engineerings'
   ]
-  
+
   for (const client of clientPages) {
     yield {
       url: `${baseUrl}/client/${client}`,
@@ -236,7 +251,7 @@ export function getSitemapStats(chunkSize: number = 50000): {
     totalUrls++
   }
   const chunkCount = Math.ceil(totalUrls / chunkSize)
-  
+
   return {
     totalUrls,
     chunkCount,

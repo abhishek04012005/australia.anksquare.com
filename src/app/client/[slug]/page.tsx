@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${client.name} - Ank Square Project`,
       description: client.testimonial,
-      url: `https://usa.anksquare.com/client/${client.slug}`,
+      url: `https://uk.anksquare.com/client/${client.slug}`,
       type: 'website',
     },
     twitter: {
@@ -66,13 +66,13 @@ export default async function ClientProjectPage({ params }: Props) {
                   '@type': 'CreativeWork',
                   name: `${client.name} - ${client.project}`,
                   description: client.testimonial,
-                  url: `https://usa.anksquare.com/client/${client.slug}`,
+                  url: `https://uk.anksquare.com/client/${client.slug}`,
                   creator: {
                     '@type': 'Organization',
                     name: 'Ank Square',
-                    url: 'https://usa.anksquare.com'
+                    url: 'https://uk.anksquare.com'
                   },
-                  image: `https://usa.anksquare.com/assets/client${client.logo}`,
+                  image: `https://uk.anksquare.com/assets/client${client.logo}`,
                   client: {
                     '@type': 'Organization',
                     name: client.name

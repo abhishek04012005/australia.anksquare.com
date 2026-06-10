@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Privacy Policy - Ank Square',
     description: 'Your privacy matters to us. Read our privacy policy to understand how we protect your data.',
-    url: 'https://usa.anksquare.com/privacy-policy',
+    url: 'https://uk.anksquare.com/privacy-policy',
     type: 'website',
   },
   twitter: {
@@ -130,11 +130,11 @@ export default function PrivacyPolicyPage() {
               '@type': 'WebPage',
               name: 'Privacy Policy - Ank Square',
               description: 'Privacy policy and data protection information for Ank Square digital service',
-              url: 'https://usa.anksquare.com/privacy-policy',
+              url: 'https://uk.anksquare.com/privacy-policy',
               mainEntity: {
                 '@type': 'Organization',
                 name: 'Ank Square',
-                url: 'https://usa.anksquare.com',
+                url: 'https://uk.anksquare.com',
                 contactPoint: {
                   '@type': 'ContactPoint',
                   email: contact.email,

@@ -8,7 +8,7 @@ import {
 
 import CityServiceClient from './city-service-client'
 
-import { getCityFromPath } from '../../../../seo/us'
+import { getCityFromPath } from '../../../../seo/uk'
 
 import {
   extractServiceModifier,
@@ -43,8 +43,8 @@ const allServices = [
   }))
 ]
 
-// usa-only services - these services can only be accessed from usa
-// Full service slugs that are restricted to usa only
+// uk-only services - these services can only be accessed from uk
+// Full service slugs that are restricted to uk only
 const indiaOnlyServices = [
   'flipkart-account-management',
   'blinkit-account-management',
@@ -65,7 +65,7 @@ function isRestrictedOutsideIndia(
   return (
     indiaOnlyServices.includes(serviceSlug) &&
     city &&
-    city.country.toLowerCase() !== 'usa'
+    city.country.toLowerCase() !== 'uk'
   )
 }
 
@@ -95,7 +95,7 @@ export async function generateMetadata({
     }
   }
 
-  // Restrict usa-only services
+  // Restrict uk-only services
   if (isRestrictedOutsideIndia(serviceSlug, city)) {
     return {
       title: 'Page Not Found',
@@ -135,7 +135,7 @@ export async function generateMetadata({
       openGraph: {
         title,
         description,
-        url: `https://usa.anksquare.com/service/${resolvedParams.slug}/${resolvedParams.segments.join('/')}`,
+        url: `https://uk.anksquare.com/service/${resolvedParams.slug}/${resolvedParams.segments.join('/')}`,
         type: 'website'
       },
 
@@ -170,7 +170,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `https://usa.anksquare.com/service/${resolvedParams.slug}`,
+      url: `https://uk.anksquare.com/service/${resolvedParams.slug}`,
       type: 'website'
     },
 
@@ -213,7 +213,7 @@ export default async function CityServicePage({
     notFound()
   }
 
-  // Restrict usa-only services
+  // Restrict uk-only services
   if (isRestrictedOutsideIndia(serviceSlug, city)) {
     notFound()
   }

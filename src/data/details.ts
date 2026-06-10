@@ -69,7 +69,7 @@ export const details = {
     pinterest: 'https://in.pinterest.com/anksquare/',
     // facebook: 'https://facebook.com/anksquare',
     youtube: 'https://www.youtube.com/@anksquare',
-    website: 'https://usa.anksquare.com',
+    website: 'https://uk.anksquare.com',
     email: 'contact@anksquare.com',
     phone: '+91-9939337638',
     whatsapp: '919939337638',
@@ -86,7 +86,7 @@ export const details = {
       zipCode: '801503',
     },
     timezone: 'IST (Indian Standard Time)',
-    bookingUrl: 'https://usa.anksquare.com/contact',
+    bookingUrl: 'https://uk.anksquare.com/contact',
   },
 
 

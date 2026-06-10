@@ -1,7 +1,7 @@
 # City-Level Service Pages - SEO Implementation
 
 ## Overview
-Successfully implemented city-level service pages for SEO optimization. Each service now has location-specific landing pages for businesses in different cities across usa.
+Successfully implemented city-level service pages for SEO optimization. Each service now has location-specific landing pages for businesses in different cities across uk.
 
 ## Route Structure
 
