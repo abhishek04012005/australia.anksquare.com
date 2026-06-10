@@ -71,7 +71,7 @@ const Contact = () => {
 
         // Validation for phone number
         if (name === 'number') {
-            // Support uk (+1 + 10 digits) and international numbers (7-14 digits with optional +)
+            // Support australia (+1 + 10 digits) and international numbers (7-14 digits with optional +)
             // Allow digits and + only
             if (!/^[\d+]*$/.test(value)) {
                 return
@@ -101,7 +101,7 @@ const Contact = () => {
             } else {
                 setErrors(prev => ({
                     ...prev,
-                    number: 'Enter valid phone number (10 digits for uk or international format)'
+                    number: 'Enter valid phone number (10 digits for australia or international format)'
                 }))
             }
             
@@ -234,7 +234,7 @@ const Contact = () => {
                                 id="phone-input"
                                 type="tel"
                                 name="number"
-                                placeholder="Your Number (e.g., +442025551234)"
+                                placeholder="Your Number (e.g., +612025551234)"
                                 value={formData.number}
                                 onChange={handleChange}
                                 required
@@ -245,7 +245,7 @@ const Contact = () => {
                             />
                             {errors.number && <span id="phone-error" className={styles.errorText}>{errors.number}</span>}
                             <small style={{ fontSize: '0.85rem', color: '#666', marginTop: '0.25rem', display: 'block' }}>
-                                uk (10 digits) or international format (+ country code + number, max 15 digits)
+                                australia (10 digits) or international format (+ country code + number, max 15 digits)
                             </small>
                         </div>
                         <div className={styles.formGroup}>

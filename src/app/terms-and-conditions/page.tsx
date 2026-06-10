@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Terms & Conditions - Ank Square',
     description: 'Legal terms and conditions for Ank Square digital service and client agreements.',
-    url: 'https://uk.anksquare.com/terms-and-conditions',
+    url: 'https://australia.anksquare.com/terms-and-conditions',
     type: 'website',
   },
   twitter: {
@@ -117,7 +117,7 @@ export default function TermsAndConditionsPage() {
 
             <h3 style={{ color: '#213f61', marginBottom: '1rem', fontSize: '1.5rem' }}>8. Governing Law</h3>
             <p style={{ marginBottom: '2rem' }}>
-              These terms and conditions are governed by and construed in accordance with the laws of uk.
+              These terms and conditions are governed by and construed in accordance with the laws of australia.
             </p>
 
             <h3 style={{ color: '#213f61', marginBottom: '1rem', fontSize: '1.5rem' }}>9. Changes to Terms</h3>
@@ -146,11 +146,11 @@ export default function TermsAndConditionsPage() {
               '@type': 'WebPage',
               name: 'Terms & Conditions - Ank Square',
               description: 'Legal terms and conditions for Ank Square digital service',
-              url: 'https://uk.anksquare.com/terms-and-conditions',
+              url: 'https://australia.anksquare.com/terms-and-conditions',
               mainEntity: {
                 '@type': 'Organization',
                 name: 'Ank Square',
-                url: 'https://uk.anksquare.com',
+                url: 'https://australia.anksquare.com',
                 contactPoint: {
                   '@type': 'ContactPoint',
                   email: contact.email,

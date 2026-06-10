@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Client Testimonials - Ank Square Success Stories',
     description: 'Real testimonials from businesses that have grown with Ank Square. See how our service have made a difference.',
-    url: 'https://uk.anksquare.com/testimonial',
+    url: 'https://australia.anksquare.com/testimonial',
     type: 'website',
   },
   twitter: {
@@ -44,7 +44,7 @@ export default function TestimonialPage() {
             <p
               className={styles.heroDescription}
             >
-              Discover how Ank Square has helped businesses across uk achieve their digital goals.
+              Discover how Ank Square has helped businesses across australia achieve their digital goals.
               Read genuine testimonials from our satisfied clients.
             </p>
             <div
@@ -169,7 +169,7 @@ export default function TestimonialPage() {
               '@type': 'WebPage',
               name: 'Client Testimonials - Ank Square',
               description: 'Read genuine testimonials from Ank Square clients about our digital service',
-              url: 'https://uk.anksquare.com/testimonial',
+              url: 'https://australia.anksquare.com/testimonial',
               mainEntity: {
                 '@type': 'Organization',
                 name: 'Ank Square',

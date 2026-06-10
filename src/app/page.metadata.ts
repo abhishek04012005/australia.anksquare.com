@@ -28,14 +28,14 @@ export async function generateMetadata(): Promise<Metadata> {
       address: false,
       telephone: false,
     },
-    metadataBase: new URL('https://uk.anksquare.com'),
+    metadataBase: new URL('https://australia.anksquare.com'),
     alternates: {
       canonical: '/',
     },
     openGraph: {
       title: 'Ank Square - Digital Services for Business Growth',
       description: 'Expert merchant account management, custom website development, and digital marketing solutions. 500+ projects completed with 300+ happy clients.',
-      url: 'https://uk.anksquare.com',
+      url: 'https://australia.anksquare.com',
       siteName: 'Ank Square',
       type: 'website',
       locale: 'en_US',

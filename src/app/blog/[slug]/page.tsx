@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://uk.anksquare.com/blog/${post.slug}`,
+      url: `https://australia.anksquare.com/blog/${post.slug}`,
       type: 'article',
       publishedTime: new Date(post.date).toISOString(),
       authors: [post.author],
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: [post.image],
     },
     alternates: {
-      canonical: `https://uk.anksquare.com/blog/${post.slug}`,
+      canonical: `https://australia.anksquare.com/blog/${post.slug}`,
     },
   }
 }
@@ -87,14 +87,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       "name": "Ank Square",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://uk.anksquare.com/logo.png"
+        "url": "https://australia.anksquare.com/logo.png"
       }
     },
     "datePublished": new Date(post.date).toISOString(),
     "dateModified": new Date(post.date).toISOString(),
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://uk.anksquare.com/blog/${post.slug}`
+      "@id": `https://australia.anksquare.com/blog/${post.slug}`
     }
   }
 

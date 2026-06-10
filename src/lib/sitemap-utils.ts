@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { marketplaceServices, websiteTypes, mainServices } from '@/data/service'
-import { cities, createCitySlug } from '@/seo/uk'
+import { cities, createCitySlug } from '@/seo/australia'
 import { blogPosts } from '@/data/blog'
 import { SERVICE_MODIFIERS } from '@/seo/serviceModifiers'
 
@@ -33,8 +33,8 @@ const PRIORITY_MODIFIERS = [
   'fast-growing',
 ];
 /**
- * uk-only services (cannot be used with non-uk cities)
- * Only generate URLs for these services when city.country === 'uk'
+ * australia-only services (cannot be used with non-australia cities)
+ * Only generate URLs for these services when city.country === 'australia'
  */
 const INDIA_ONLY_SERVICE_SLUGS = new Set([
   'flipkart-account-management',
@@ -50,7 +50,7 @@ const INDIA_ONLY_SERVICE_SLUGS = new Set([
  * Generator for sitemap URLs - yields URLs one at a time to reduce memory usage
  */
 export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
-  const baseUrl = 'https://uk.anksquare.com'
+  const baseUrl = 'https://australia.anksquare.com'
 
   // Static pages
   const staticPages: SitemapUrl[] = [
@@ -110,8 +110,8 @@ export function* generateSitemapUrlsGenerator(): Generator<SitemapUrl> {
     for (let i = 0; i < cities.length; i++) {
       const city = cities[i]
 
-      // Skip uk-only services for non-uk cities
-      if (isIndiaOnlyService && city.country.toLowerCase() !== 'uk') {
+      // Skip australia-only services for non-australia cities
+      if (isIndiaOnlyService && city.country.toLowerCase() !== 'australia') {
         continue
       }
 

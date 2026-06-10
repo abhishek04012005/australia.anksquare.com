@@ -50,13 +50,13 @@ export default function EnquiryForm() {
     e.preventDefault()
 
     const nameValid = /^[A-Za-z\s]+$/.test(formData.name.trim())
-    // Support uk (+1 + 10 digits) and international numbers (7-14 digits with optional +)
+    // Support australia (+1 + 10 digits) and international numbers (7-14 digits with optional +)
     const phoneValid = /^(\+1)?\d{10}$|^\+[1-9]\d{7,14}$/.test(formData.phone)
 
     if (!nameValid || !phoneValid || !formData.service) {
       setErrors({
         name: nameValid ? '' : 'Please enter a valid name',
-        phone: phoneValid ? '' : 'Please enter a valid phone number (10 digits for uk or international format)'
+        phone: phoneValid ? '' : 'Please enter a valid phone number (10 digits for australia or international format)'
       })
       return
     }
@@ -71,7 +71,7 @@ export default function EnquiryForm() {
             name: formData.name.trim(),
             phone: formData.phone.trim(),
             service: formData.service,
-            source: 'uk.anksquare.com',
+            source: 'australia.anksquare.com',
             status: 'pending'
           }
         ])
@@ -162,13 +162,13 @@ export default function EnquiryForm() {
                   setFormData(prev => ({ ...prev, phone: value }))
                 }}
                 className={`${styles.input} ${errors.phone ? styles.error : ''}`}
-                placeholder="Enter phone number (e.g., +442025551234)"
+                placeholder="Enter phone number (e.g., +612025551234)"
                 maxLength={16}
                 required
               />
               {errors.phone && <span className={styles.errorText}>{errors.phone}</span>}
               <small className={styles.helpText}>
-                uk (10 digits) or international format (+ country code + number)
+                australia (10 digits) or international format (+ country code + number)
               </small>
             </div>
 

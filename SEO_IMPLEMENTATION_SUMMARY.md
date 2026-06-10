@@ -172,8 +172,8 @@ Your Ank Square website now includes comprehensive SEO optimizations across all 
   "@type": "WebPage",
   "name": "Ank Square - Digital Services",
   "description": "...",
-  "url": "https://uk.anksquare.com",
-  "image": "https://uk.anksquare.com/og-image.jpg"
+  "url": "https://australia.anksquare.com",
+  "image": "https://australia.anksquare.com/og-image.jpg"
 }
 ```
 

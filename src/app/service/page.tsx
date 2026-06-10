@@ -7,11 +7,11 @@ export const revalidate = 7776000
 export const metadata: Metadata = {
   title: 'Our Services - E-commerce Solutions & Digital Marketing | Ank Square',
   description: 'Comprehensive digital service including merchant account management, website development, and digital marketing. Expert e-commerce solutions for Indian businesses across all major platforms.',
-  keywords: 'e-commerce service, merchant account management, website development, digital marketing, SEO service, online marketing, e-commerce platform management, web design uk, digital marketing agency',
+  keywords: 'e-commerce service, merchant account management, website development, digital marketing, SEO service, online marketing, e-commerce platform management, web design australia, digital marketing agency',
   openGraph: {
     title: 'Our Services - Complete Digital Solutions | Ank Square',
     description: 'Professional e-commerce account management, custom website development, and comprehensive digital marketing service for growing businesses.',
-    url: 'https://uk.anksquare.com/service',
+    url: 'https://australia.anksquare.com/service',
     type: 'website',
   },
   twitter: {
@@ -39,11 +39,11 @@ export default function ServicesPage() {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Ank Square',
-              url: 'https://uk.anksquare.com',
-              description: 'Leading digital service company providing e-commerce account management, website development, and digital marketing solutions for businesses in uk',
+              url: 'https://australia.anksquare.com',
+              description: 'Leading digital service company providing e-commerce account management, website development, and digital marketing solutions for businesses in australia',
               serviceType: ['E-commerce Management', 'Web Development', 'Digital Marketing'],
-              areaServed: 'uk',
-              logo: 'https://uk.anksquare.com/logo.svg',
+              areaServed: 'australia',
+              logo: 'https://australia.anksquare.com/logo.svg',
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: '+91-XXXXXXXXXX',
