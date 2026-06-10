@@ -17,20 +17,11 @@ export interface SitemapUrl {
  */
 const PRIORITY_MODIFIERS = [
   'best',
-  'top',
-  'toprated',
-  'near-me',
-  'local',
-  'trusted',
-  'verified',
-  'expert',
-  'professional',
-  'certified',
-  'recommended',
   'premium',
-  'popular',
+  'leading',
+  'trusted',
   'no-1',
-  'fast-growing',
+  'popular',
 ];
 /**
  * australia-only services (cannot be used with non-australia cities)
